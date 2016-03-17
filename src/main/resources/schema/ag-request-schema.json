@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://bbva.com/apigateway",
+  "type": "object",
+  "properties": {
+    "batch": {
+      "id": "http://bbva.com/apigateway/batch",
+      "type": ["array", "object"],
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "id": "http://bbva.com/apigateway/batch/0",
+        "type": "object",
+        "properties": {
+          "id": {
+            "id": "http://bbva.com/apigateway/batch/0/id",
+            "type": "string"
+          },
+          "url": {
+            "id": "http://bbva.com/apigateway/batch/0/url",
+            "type": "string"
+          },
+          "method": {
+            "id": "http://bbva.com/apigateway/batch/0/method",
+            "type": "string",
+            "enum": [null,"GET","POST","PUT","DELETE","PATCH"]
+          },
+          "body": {
+            "id": "http://bbva.com/apigateway/batch/0/body",
+            "type": ["string","null"]
+          },
+          "headers": {
+            "id": "http://bbva.com/apigateway/batch/0/headers",
+            "type": "array",
+            "items": {
+              "id": "http://bbva.com/apigateway/batch/0/headers/0",
+              "type": "object",
+              "properties": {
+                "header": {
+                  "id": "http://bbva.com/apigateway/batch/0/headers/0/header",
+                  "type": "string"
+                },
+                "value": {
+                  "id": "http://bbva.com/apigateway/batch/0/headers/0/value",
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["header","value"]
+          }
+        },
+        "required": ["url","method"]
+      }
+    }
+  },
+  "required": ["batch"]
+}

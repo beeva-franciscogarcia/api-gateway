@@ -1,0 +1,6 @@
+jsonschema:
+  folder: /home/franciscogarcia/workspace_aso/api-gateway/target/classes/schema
+services:
+  cards: http://localhost:8882/cards
+  accounts: http://localhost:8882/accounts
+  transactions: http://localhost:8882/transactions
